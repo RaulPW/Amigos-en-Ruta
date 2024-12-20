@@ -34,7 +34,7 @@ body {
 }
 
 .contain {
-    max-width: 1400px;
+    max-width: 1800px;
     margin: 0 auto;
 }
 
@@ -69,6 +69,7 @@ img {
 .info-follow {
     width: 50%;
     border-right: 0.2rem solid;
+
 }
 
 .title-follow {
@@ -606,20 +607,28 @@ img {
 
 }
 
-.trip-description {
-    opacity: 0;
+/*Cuadro de diálogo que aparece para ver el itinerario*/
+dialog[id^="trip-description"] {
+    width: 60%;
+    background-color: #F8692D;
     padding: 1rem;
     transition: opacity 0.5s;
+    top: 10%;
+    left: 20%;
 }
 
-.trip-description h4 {
+dialog[id^="trip-description"]::backdrop {
+    backdrop-filter: blur(0.3rem);
+}
+
+dialog[id^="trip-description"] h4 {
     text-align: center;
     text-decoration: underline;
     font-size: 1.1rem;
     margin-bottom: 1rem;
 }
 
-.trip-description li {
+dialog[id^="trip-description"] li {
     list-style: none;
     line-height: 1.5;
     margin: 1rem;
@@ -628,6 +637,25 @@ img {
     text-indent: 1.5rem;
 }
 
+button[id^="btn-"] {
+    font-size: 0.9rem;
+    font-family: "Poppins", sans-serif;
+    margin: 0.3rem 37.5%;
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    background-color: #F8692D;
+    font-weight: bold;
+    width: 25%;
+}
+
+button[id^="btn-"]:hover {
+    background-color: black;
+    color: #F8692D;
+}
+
+
+
 /*Para cada tarjeta que contiene la información del viaje colocaremos una imagen de fondo distinta*/
 /*Estos son las propiedades generales para todas las imágenes*/
 .bg-image {
@@ -635,6 +663,8 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+    min-height: 400px;
+
 }
 
 /*Foto Sport-1*/
@@ -682,7 +712,6 @@ img {
 /*Foto gastronomy-3*/
 #img-gastronomy-03 {
     background-image: url(imgs/categorias/gastronomia/gastronomy-03.jpg);
-
 }
 
 /*Foto adventure-1*/
@@ -754,19 +783,16 @@ img {
 .cont-date-price a {
     text-decoration: none;
     color: black;
-    padding: 0.8rem;
+    padding: 0.5rem;
     background-color: #F8692D;
     border: 0.2rem solid black;
-    border-radius: 0.3rem;
+    border-radius: 0.5rem;
     font-weight: bold;
+    min-width: 10%;
+    text-align: center;
 }
 
 .cont-date-price a:hover {
     background-color: black;
     color: #F8692D;
-}
-
-#bg-footer-categories {
-    background-color: #F6E7C8;
-
 }
