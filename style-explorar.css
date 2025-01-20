@@ -1,0 +1,215 @@
+/*CSS - explorar.html*/
+.cont-cards {
+    padding: 1rem;
+}
+
+.fs-title-category {
+    font-size: 2rem;
+}
+
+.trip {
+    width: 85%;
+    margin: 0.8rem auto;
+    background-color: #F6E7C8;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    border: 0.3rem solid;
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+}
+
+.trip h3 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.trip i {
+    margin: 0 0.3rem;
+}
+
+.cont-description {
+    font-family: "Poppins", sans-serif;
+    margin: 1rem;
+}
+
+.cont-description p {
+    margin: 1rem;
+    text-align: center;
+
+}
+
+/*Cuadro de diálogo que aparece para ver el itinerario*/
+dialog[id^="trip-description"] {
+    width: 60%;
+    background-color: #F8692D;
+    padding: 1rem;
+    transition: all 0.5s;
+    top: 10%;
+    left: 20%;
+}
+
+dialog[id^="trip-description"]::backdrop {
+    backdrop-filter: blur(0.3rem);
+    transition: all 0.5s;
+}
+
+dialog[id^="trip-description"] h4 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+dialog[id^="trip-description"] li {
+    list-style: none;
+    line-height: 1.5;
+    margin: 1rem;
+    font-size: 0.9rem;
+    font-style: italic;
+    text-indent: 1.5rem;
+}
+
+button[id^="btn-"] {
+    font-size: 0.9rem;
+    font-family: "Poppins", sans-serif;
+    margin: 0.3rem 37.5%;
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    background-color: #F8692D;
+    font-weight: bold;
+    width: 25%;
+    transition: all 0.5s;
+}
+
+button[id^="btn-"]:hover {
+    background-color: black;
+    color: #F8692D;
+}
+
+
+
+/*Para cada tarjeta que contiene la información del viaje colocaremos una imagen de fondo distinta*/
+/*Estos son las propiedades generales para todas las imágenes*/
+.bg-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    min-height: 400px;
+}
+
+/*Foto Sport-1*/
+#img-sport-01 {
+    background-image: url(imgs/categorias/deportes/sport-1.jpg);
+}
+
+/*Foto Sport-2*/
+#img-sport-02 {
+    background-image: url(imgs/categorias/deportes/sport-2.jpg);
+}
+
+/*Foto Sport-3*/
+#img-sport-03 {
+    background-image: url(imgs/categorias/deportes/sport-3.jpg);
+}
+
+/*Foto Culture-1*/
+#img-culture-01 {
+    background-image: url(imgs/categorias/cultura/culture-01.jpg);
+    background-position: bottom;
+}
+
+/*Foto Culture-2*/
+#img-culture-02 {
+    background-image: url(imgs/categorias/cultura/culture-02.jpg);
+    background-position: bottom;
+}
+
+/*Foto Culture-3*/
+#img-culture-03 {
+    background-image: url(imgs/categorias/cultura/culture-03.jpg);
+}
+
+/*Foto gastronomy-1*/
+#img-gastronomy-01 {
+    background-image: url(imgs/categorias/gastronomia/gastronomy-01.jpg);
+}
+
+/*Foto gastronomy-2*/
+#img-gastronomy-02 {
+    background-image: url(imgs/categorias/gastronomia/gastronomy-02.jpg);
+}
+
+/*Foto gastronomy-3*/
+#img-gastronomy-03 {
+    background-image: url(imgs/categorias/gastronomia/gastronomy-03.jpg);
+}
+
+/*Foto adventure-1*/
+#img-adventure-01 {
+    background-image: url(imgs/categorias/aventura/adventure-01.jpg);
+
+}
+
+/*Foto adventure-2*/
+#img-adventure-02 {
+    background-image: url(imgs/categorias/aventura/adventure-02.jpg);
+
+}
+
+/*Foto adventure-3*/
+#img-adventure-03 {
+    background-image: url(imgs/categorias/aventura/adventure-03.jpg);
+    background-position: bottom;
+}
+
+/*Foto thematic-1*/
+#img-thematic-01 {
+    background-image: url(imgs/categorias/tematico/thematic-01.jpg);
+
+}
+
+/*Foto thematic-2*/
+#img-thematic-02 {
+    background-image: url(imgs/categorias/tematico/thematic-02.jpg);
+
+}
+
+/*Foto thematic-3*/
+#img-thematic-03 {
+    background-image: url(imgs/categorias/tematico/thematic-03.jpg);
+}
+
+.cont-date-price {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info-list {
+    margin: 1rem;
+    width: 70%;
+}
+
+.info-list li {
+    list-style: inside;
+    line-height: 1.5;
+}
+
+.cont-date-price a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem;
+    background-color: #F8692D;
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    min-width: 10%;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.cont-date-price a:hover {
+    background-color: black;
+    color: #F8692D;
+}

@@ -23,8 +23,6 @@
 
 /*---------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------*/
 
 
 /*CSS - PROPIEDADES GENERALES*/
@@ -43,19 +41,74 @@ img {
     height: auto;
 }
 
-/*CSS - HEADER - PROPIEDADES GENERALES*/
-.cont-title {
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+
+/*CSS - HEADER - PROPIEDADES EN COMÚN CON TODAS LAS PÁGINAS */
+.logo-title {
     padding: 1rem;
+    margin: auto;
+    width: 10%;
+    text-align: center;
+    animation: rodar 1s forwards;
+    border-radius: 50%;
+}
+
+.logo {
+    text-shadow: 2px 2px 5px #00000052;
+    border-radius: 50%;
+    border: 0.3rem solid #F8692D;
+}
+
+
+@keyframes rodar {
+    0% {
+        transform: translateX(-1000px);
+    }
+    100% {
+        transform: translate(0px) rotate(720deg);     
+    }
+}
+
+.nav-header {
     margin: 0 auto;
+    width: 80%;
 }
 
-.title-header a {
-    color: black;
+.cont-title-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cont-ul-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.item-ul-header {
+    list-style: none;
+
+}
+
+.link-li-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(248, 105, 45);
     text-decoration: none;
+    opacity: 0.4;
+    transition: all 0.5s;
 }
 
+.link-li-header:hover {
+    opacity: 1;
+}
 
-/*CSS - FOOTER - PROPIEDADES GENERALES*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+
+/*CSS - FOOTER - PROPIEDADES GENERALES CON TODAS LAS PÁGINAS*/
 .cont-footer {
     background-color: #F8692D;
     padding: 1rem;
@@ -120,679 +173,39 @@ img {
     margin-right: 0.3rem;
 }
 
-
 /*---------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------*/
-
-/*CSS - index.html*/
-
-/*Cada sección debe tener un mínimo de altura*/
-.cont-height-bg {
-    min-height: 100vh;
-}
-
-/*Además cada sección tienen un color de fondo diferente:
-        secciones impares: mantienen el color del body
-        secciones pares: #F8692D*/
-.even {
-    background-color: #F8692D;
-}
-
-/*Para los titulos de cada sección*/
-.title-section {
-    text-align: center;
-    padding: 2rem;
-    text-shadow: 1px 1px 0px #08080847;
-}
-
-
-/* ---- CSS - HEADER ---- */
-.nav-header {
-    margin: 0 auto;
-}
-
-.cont-title-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.cont-ul-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.item-ul-header {
-    list-style: none;
-    padding: 2rem;
-}
-
-.link-li-header {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #F8692D;
-    text-decoration: none;
-    opacity: 0.6;
-}
-
-.link-li-header:hover {
-    opacity: 1;
-}
-
-.cont-img-text {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.cont-img-text img {
-    width: 45%;
-    margin: 2rem;
-    mask-image: url(imgs/index/Header/Silueta.png);
-    mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-}
-
-.cont-text-link {
-    text-align: center;
-}
-
-.cont-img-text p {
-    font-family: "Great Vibes", cursive;
-    font-weight: bold;
-    font-size: 4rem;
-    margin-bottom: 3rem;
-    text-shadow: 2px 2px 0px #ccc;
-}
-
-.cont-img-text a {
-    padding: 1rem;
-    background-color: #F8692D;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 0.8rem;
-    margin: 2rem;
-    border: 0.2rem solid black;
-}
-
-.cont-img-text a:hover {
-    background-color: black;
-    color: #F8692D;
-}
 
 /*Flecha para que el usuario pueda volver al menú desde cualquier parte de la página*/
-.fa-circle-chevron-up {
+.back {
     color: black;
     position: fixed;
-    bottom: 15px;
+    top: 400px;
     right: 15px;
     font-size: 2.5rem;
     border-radius: 60%;
     z-index: 9999;
 }
 
-.fa-circle-chevron-up:hover {
+.back:hover {
     opacity: 0.8;
 }
 
-/*---------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------*/
-
-/* ---- CSS - MAIN ---- */
-
-/*CSS - QUIENES SOMOS*/
-.description {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.description p {
-    width: 75%;
-    font-size: 1rem;
-    line-height: 2;
-}
-
-.description img {
-    width: 18%;
-    mask-image: url(imgs/index/Quienes_somos/Silueta-1.png);
-    mask-size: 100%;
-    mask-position: center;
-    mask-repeat: no-repeat;
-}
-
-.cont-art-offer {
-    display: flex;
-    justify-content: space-around;
-}
-
-.art-aboutus {
-    margin: 1rem auto;
-    width: 32%;
-    border: 0.3rem solid;
-    padding: 0.5rem;
-    border-radius: 1rem;
-    background-color: #F6E7C8;
-    box-shadow: 0 4px 2px 0px #00000063, 0 6px 2px 0 #00000063;
-}
-
-.art-aboutus h4 {
-    text-align: center;
-    margin: 0.5rem;
-}
-
-.offer-img-info {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.offer-img-info img {
-    width: 40%;
-    border-radius: 0.8rem;
-    margin: 2rem auto;
-}
-
-.offer-img-info p {
-    width: 55%;
-    padding: 0.4rem;
-    opacity: 0.8;
-    line-height: 1.5;
-}
-
-/*---------------------------------------------------------------------------------*/
-
-/*CSS - CATEGORIAS*/
-.cards-categories {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 2rem;
-}
-
-.category {
-    width: 19%;
+/*Cada sección tienen un color de fondo diferente:
+        - Secciones impares: mantienen el color del body
+        - Secciones pares: #F8692D*/
+.even {
     background-color: #F8692D;
-    padding: 1rem;
-    border-radius: 1rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 4px 0 10px 0 #00000099, 6px 0 2px 0 #00000099;
-}
-
-.category i {
-    margin-right: 0.3rem;
-}
-
-.category h4 {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-/*Propiedades generales para todos los div dentro de las tarjetas de categoria*/
-.category div {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-    margin: 0.5rem;
-    border-radius: 1rem;
-    height: 250px;
-}
-
-/*Asignar una imagen a cada tarjeta*/
-.card-sports {
-    background-image: url(imgs/index/Categorias/categories-01.jpg);
-}
-
-.card-culture {
-    background-image: url(imgs/index/Categorias/categories-02.png);
-}
-
-.card-food {
-    background-image: url(imgs/index/Categorias/categories-03.png);
-}
-
-.card-adventure {
-    background-image: url(imgs/index/Categorias/categorias-04.png);
-}
-
-.card-topics {
-    background-image: url(imgs/index/Categorias/categories-05.jpg);
-}
-
-.category p {
-    line-height: 2;
-    font-size: 0.9rem;
-    opacity: 0;
-    padding: 1rem;
-    font-style: italic;
-    height: 250px;
-    align-content: center;
-}
-
-.category p:hover {
-    opacity: 1;
-    background-color: #F8692D;
-    border: 0.2rem solid;
-    border-radius: 1rem;
-}
-
-.category a {
-    display: block;
-    text-align: center;
-    margin: 1.5rem auto;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    border: 0.2rem solid;
-    border-radius: 0.8rem;
-    padding: 0.5rem;
-}
-
-.category a:hover {
-    background-color: black;
-    color: #F8692D;
-}
-
-/*---------------------------------------------------------------------------------*/
-
-/*CSS - POPULARES*/
-.carrousel-topic {
-    display: flex;
-}
-
-.card-topic {
-    width: 20%;
-    background-color: #F6E7C8;
-    border-radius: 0.8rem;
-    margin: 0.5rem auto;
-    border: 0.2rem solid black;
-    box-shadow: 0 4px 2px 0px #00000063, 0 6px 2px 0 #00000063;
-}
-
-.card-topic img {
-    display: block;
-    margin: 1rem auto;
-    max-height: 300px;
-    border: 0.2rem solid;
-    width: 95%;
-}
-
-.card-topic h3 {
-    text-align: center;
-    margin: 1rem;
-}
-
-.info-trip {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem;
-    font-size: 0.8rem;
-}
-
-.info-trip li {
-    list-style: inside;
-    opacity: 0.8;
-}
-
-.info-trip a {
-    color: black;
-    text-decoration: none;
-    background-color: #F8692D;
-    border: 0.2rem solid black;
-    padding: 0.5rem;
-    border-radius: 1rem;
-    text-align: center;
-}
-
-.info-trip a:hover {
-    background-color: black;
-    color: #F8692D;
-}
-
-/*---------------------------------------------------------------------------------*/
-
-/*CSS - EXPERIENCIAS*/
-.cards-exp {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.card-exp {
-    width: 23%;
-    background-color: #F8692D;
-    border-radius: 0.8rem;
-    padding: 1rem;
-    position: relative;
-    box-shadow: 0 4px 2px 0px #00000063, 0 6px 2px 0 #00000063;
-}
-
-.card-exp img {
-    margin-bottom: 0.5rem;
-}
-
-.exp-text {
-    margin: 1rem auto;
-    background-color: #F6E7C8;
     border-radius: 0.5rem;
-    font-style: italic;
-    padding: 1rem;
 }
 
-.exp-date {
-    text-align: right;
-    font-size: 0.8rem;
-    position: absolute;
-    bottom: 10px;
-    right: 25px;
-}
-
-/*---------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------*/
-
-/*CSS - blog.html*/
-
-/*CSS - HEADER*/
-.cont-title-blog {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #F8692D;
-}
-
-.title-blog {
-    margin: 0 auto;
-    font-style: italic;
-    font-size: 1.5rem;
-}
-
-.art-blog {
-    width: 80%;
-    margin: 3rem auto;
-    background-color: #F8692D;
-    padding: 1rem;
-    text-align: justify;
-    line-height: 1.5;
-    border-radius: 1rem;
-    overflow: auto;
-    box-shadow: 0 4px 2px 0px #00000063, 0 6px 2px 0 #00000063;
-}
-
-.art-date i {
-    margin-right: 0.3rem;
-}
-
-.art-date {
-    margin-left: 1rem;
-    font-size: 1rem;
-    font-style: italic;
-}
-
-.foto-art {
-    max-width: 30%;
-    border: 0.4rem solid;
-    float: left;
-    margin: 0.8rem;
-}
-
-.title-art i {
-    margin: 0 0.5rem;
-}
-
-.title-art {
+/*Para los titulos de cada sección*/
+.title-section {
     text-align: center;
-    font-size: 1.6rem;
-}
-
-.text-art {
-    margin: 1rem;
-}
-
-.options {
-    list-style: auto;
-    margin: 0 1rem;
-    list-style-position: inside;
-}
-
-/*---------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------*/
-
-/*CSS - explorar.html*/
-.cont-cards {
     padding: 1rem;
-}
-
-.fs-title-category {
-    font-size: 2rem;
-}
-
-.trip {
-    width: 85%;
-    margin: 0.8rem auto;
-    background-color: #F6E7C8;
-    border-radius: 0.8rem;
-    padding: 1rem;
-    border: 0.3rem solid;
-    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
-}
-
-.trip h3 {
-    text-align: center;
-    font-size: 1.5rem;
-}
-
-.trip i {
-    margin: 0 0.3rem;
-}
-
-.cont-description {
-    font-family: "Poppins", sans-serif;
-    margin: 1rem;
-}
-
-.cont-description p {
-    margin: 1rem;
-    text-align: center;
-
-}
-
-/*Cuadro de diálogo que aparece para ver el itinerario*/
-dialog[id^="trip-description"] {
-    width: 60%;
-    background-color: #F8692D;
-    padding: 1rem;
-    transition: opacity 0.5s;
-    top: 10%;
-    left: 20%;
-}
-
-dialog[id^="trip-description"]::backdrop {
-    backdrop-filter: blur(0.3rem);
-}
-
-dialog[id^="trip-description"] h4 {
-    text-align: center;
-    text-decoration: underline;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-}
-
-dialog[id^="trip-description"] li {
-    list-style: none;
-    line-height: 1.5;
-    margin: 1rem;
-    font-size: 0.9rem;
-    font-style: italic;
-    text-indent: 1.5rem;
-}
-
-button[id^="btn-"] {
-    font-size: 0.9rem;
-    font-family: "Poppins", sans-serif;
-    margin: 0.3rem 37.5%;
-    cursor: pointer;
-    padding: 0.3rem;
-    border-radius: 0.5rem;
-    background-color: #F8692D;
-    font-weight: bold;
-    width: 25%;
-}
-
-button[id^="btn-"]:hover {
-    background-color: black;
-    color: #F8692D;
+    text-shadow: 1px 1px 0px #08080847;
+    margin: 1rem auto;
 }
 
 
 
-/*Para cada tarjeta que contiene la información del viaje colocaremos una imagen de fondo distinta*/
-/*Estos son las propiedades generales para todas las imágenes*/
-.bg-image {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-    min-height: 400px;
-
-}
-
-/*Foto Sport-1*/
-#img-sport-01 {
-    background-image: url(imgs/categorias/deportes/sport-1.jpg);
-}
-
-/*Foto Sport-2*/
-#img-sport-02 {
-    background-image: url(imgs/categorias/deportes/sport-2.jpg);
-}
-
-/*Foto Sport-3*/
-#img-sport-03 {
-    background-image: url(imgs/categorias/deportes/sport-3.jpg);
-}
-
-/*Foto Culture-1*/
-#img-culture-01 {
-    background-image: url(imgs/categorias/cultura/culture-01.jpg);
-    background-position: bottom;
-}
-
-/*Foto Culture-2*/
-#img-culture-02 {
-    background-image: url(imgs/categorias/cultura/culture-02.jpg);
-    background-position: bottom;
-}
-
-/*Foto Culture-3*/
-#img-culture-03 {
-    background-image: url(imgs/categorias/cultura/culture-03.jpg);
-}
-
-/*Foto gastronomy-1*/
-#img-gastronomy-01 {
-    background-image: url(imgs/categorias/gastronomia/gastronomy-01.jpg);
-}
-
-/*Foto gastronomy-2*/
-#img-gastronomy-02 {
-    background-image: url(imgs/categorias/gastronomia/gastronomy-02.jpg);
-}
-
-/*Foto gastronomy-3*/
-#img-gastronomy-03 {
-    background-image: url(imgs/categorias/gastronomia/gastronomy-03.jpg);
-}
-
-/*Foto adventure-1*/
-#img-adventure-01 {
-    background-image: url(imgs/categorias/aventura/adventure-01.jpg);
-
-}
-
-/*Foto adventure-2*/
-#img-adventure-02 {
-    background-image: url(imgs/categorias/aventura/adventure-02.jpg);
-
-}
-
-/*Foto adventure-3*/
-#img-adventure-03 {
-    background-image: url(imgs/categorias/aventura/adventure-03.jpg);
-    background-position: bottom;
-}
-
-/*Foto thematic-1*/
-#img-thematic-01 {
-    background-image: url(imgs/categorias/tematico/thematic-01.jpg);
-
-}
-
-/*Foto thematic-2*/
-#img-thematic-02 {
-    background-image: url(imgs/categorias/tematico/thematic-02.jpg);
-
-}
-
-/*Foto thematic-3*/
-#img-thematic-03 {
-    background-image: url(imgs/categorias/tematico/thematic-03.jpg);
-}
-
-
-.bg-image p {
-    display: block;
-    background-color: #F6E7C8;
-    text-align: end;
-    font-size: 0.8rem;
-    margin: 0 auto;
-}
-
-.bg-image p:hover+.trip-description {
-    background-color: #F8692D;
-    opacity: 1;
-    border: 0.3rem solid;
-}
-
-.cont-date-price {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.info-list {
-    margin: 1rem;
-    width: 70%;
-}
-
-.info-list li {
-    list-style: inside;
-    line-height: 1.5;
-}
-
-.cont-date-price a {
-    text-decoration: none;
-    color: black;
-    padding: 0.5rem;
-    background-color: #F8692D;
-    border: 0.2rem solid black;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    min-width: 10%;
-    text-align: center;
-}
-
-.cont-date-price a:hover {
-    background-color: black;
-    color: #F8692D;
-}

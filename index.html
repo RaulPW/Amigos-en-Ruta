@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- <link rel="stylesheet" href="style.css" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="style-index.css" type="text/css"> -->
+    <link rel="stylesheet" href="style-responsive.css">
     <!--Fontawesome-->
     <script src="https://kit.fontawesome.com/2b53df46e3.js" crossorigin="anonymous"></script>
 
@@ -15,15 +17,13 @@
 <body>
     <div class="contain">
         <!--BOTÓN PARA SUBIR AL HEADER DESDE CUALQUIER PARTE DEL DOCUMENTO-->
-        <a href="#home" title="Volver al menú"><i class="fa-solid fa-circle-chevron-up"></i></a>
+        <a href="#home" title="Volver al menú"><i class="fa-solid fa-circle-chevron-up back"></i></a>
 
         <!--HEADER-->
-        <header class="cont-height-bg" id="home">
+        <header id="home">
             <div class="cont-title-nav">
-                <div class="cont-title">
-                    <h1 class="title-header"><a href="index.html">Amigos</a></h1>
-                    <h1 class="title-header"><a href="index.html">en Ruta</a></h1>
-                </div>
+                <a href="index.html" class="logo-title"><img src="imgs/index/logo-aer.png" alt="Logo Amigos en Ruta"
+                        class="logo"></a>
                 <nav class="nav-header">
                     <ul class="cont-ul-header">
                         <li class="item-ul-header"><a class='link-li-header' href="#link-aboutus">Quiénes somos</a></li>
@@ -38,9 +38,9 @@
             <div class="cont-img-text">
                 <img src="imgs/index/Header/bg-image.png" alt="Gente viajando">
                 <div class="cont-text-link">
-                    <p>Descubre el mundo, conecta con amigos en cada ruta.</p>
-                    <a href="explorar.html">Explorar viajes</a>
-                    <a href="#">Únete ahora</a>
+                    <p class="slogan">Descubre el mundo, conecta con amigos en cada ruta.</p>
+                    <a href="explorar.html" class="btn-header">Explorar viajes</a>
+                    <a href="#" class="btn-header">Únete ahora</a>
                 </div>
 
         </header>
@@ -48,10 +48,11 @@
         <main class="cont-main">
 
             <!--Section Quienes Somos-->
-            <section class="cont-height-bg even">
+            <section class="even">
                 <h2 class="title-section" id="link-aboutus">Quiénes somos</h2>
                 <div class="description">
-                    <p><strong>Amigos en Ruta</strong> es una agencia de viajes creada para quienes
+                    <p class="text-description"><strong>Amigos en Ruta</strong> es una agencia de viajes creada para
+                        quienes
                         buscan más que destinos: conexiones auténticas y experiencias compartidas. Diseñamos rutas
                         temáticas
                         que combinan aventura, cultura y diversión, creando momentos inolvidables entre viajeros
@@ -93,7 +94,7 @@
             </section>
 
             <!--Seccion Categorias-->
-            <section class="cont-height-bg">
+            <section>
                 <h2 class="title-section" id="link-categories">Categorias</h2>
                 <div class="cards-categories">
                     <article class="category">
@@ -144,80 +145,88 @@
             </section>
 
             <!--Seccion Populares-->
-            <section class="cont-height-bg even">
+            <section class="even">
                 <h2 class="title-section" id="link-topic">Populares</h2>
                 <div class="carrousel-topic">
-                    <article class="card-topic">
-                        <img src="imgs/index/Populares/popular-01.jpg" alt="Premier League Experience">
-                        <h3>Premier League Experience</h3>
-                        <div class="info-trip">
-                            <ul class="info-trip-text">
+                    <button class="btn-carrousel" onclick="prevSlide()">
+                        <i class="fa-solid fa-circle-chevron-left arrow"></i>
+                    </button>
+
+                    <div class="carrousel-inner">
+                        <div class="card-topic">
+                            <img src="imgs/index/Populares/popular-01.jpg" alt="Premier League Experience"
+                                class="image-card">
+                            <h3>Premier League Experience</h3>
+                            <ul class="info-trip">
                                 <li><strong>Precio</strong>: 1.100€</li>
                                 <li><strong>Plazas Disponibles</strong>: 20</li>
                             </ul>
-                            <a href="explorar.html#premier">Ver detalles</a>
+                            <a href="explorar.html#premier" class="link-details">Ver detalles</a>
                         </div>
-                    </article>
 
-                    <article class="card-topic">
-                        <img src="imgs/index/Populares/popular-02.jpg" alt="Paris Arts & History Tour">
-                        <h3>Paris Arts & History Tour</h3>
-                        <div class="info-trip">
-                            <ul class="info-trip-text">
+                        <div class="card-topic">
+                            <img src="imgs/index/Populares/popular-02.jpg" alt="Paris Arts & History Tour"
+                                class="image-card">
+                            <h3>Paris Arts & History Tour</h3>
+                                <ul class="info-trip">
+                                    <li><strong>Precio</strong>: 1.400€</li>
+                                    <li><strong>Plazas Disponibles</strong>: 12</li>
+                                </ul>
+                                <a href="explorar.html#paris" class="link-details">Ver detalles</a>
+                        </div>
+
+                        <div class="card-topic active">
+                            <img src="imgs/index/Populares/popular-03.jpg" alt="Adventure on Rails" class="image-card">
+                            <h3>Adventure on Rails</h3>
+                                <ul class="info-trip">
+                                    <li><strong>Precio</strong>: 1850€</li>
+                                    <li><strong>Plazas Disponibles</strong>: 25</li>
+                                </ul>
+                                <a href="explorar.html#rails" class="link-details">Ver detalles</a>
+                        </div>
+
+                        <div class="card-topic">
+                            <img src="imgs/index/Populares/popular-04.jpg" alt="Alpine Hiking" class="image-card">
+                            <h3>Nature's Expedition</h3>
+
+                                <ul class="info-trip">
+                                    <li><strong>Precio</strong>: 1.000€</li>
+                                    <li><strong>Plazas Disponibles</strong>: 10</li>
+                                </ul>
+                                <a href="explorar.html#nature" class="link-details">Ver detalles</a>
+
+                        </div>
+
+                        <div class="card-topic">
+                            <img src="imgs/index/Populares/popular-05.jpg" alt="Italian Culinary Journey"
+                                class="image-card">
+                            <h3>Italian Culinary Journey</h3>
+
+                            <ul class="info-trip">
                                 <li><strong>Precio</strong>: 1.200€</li>
-                                <li><strong>Plazas Disponibles</strong>: 12</li>
-                            </ul>
-                            <a href="explorar.html#paris">Ver detalles</a>
-                        </div>
-                    </article>
-
-                    <article class="card-topic">
-                        <img src="imgs/index/Populares/popular-03.jpg" alt="Adventure on Rails">
-                        <h3>Adventure on Rails</h3>
-                        <div class="info-trip">
-                            <ul class="info-trip-text">
-                                <li><strong>Precio</strong>: 800€</li>
-                                <li><strong>Plazas Disponibles</strong>: 25</li>
-                            </ul>
-                            <a href="explorar.html#rails">Ver detalles</a>
-                        </div>
-                    </article>
-
-                    <article class="card-topic">
-                        <img src="imgs/index/Populares/popular-04.jpg" alt="Alpine Hiking">
-                        <h3>Nature's Expedition</h3>
-                        <div class="info-trip">
-                            <ul class="info-trip-text">
-                                <li><strong>Precio</strong>: 1.000€</li>
-                                <li><strong>Plazas Disponibles</strong>: 10</li>
-                            </ul>
-                            <a href="explorar.html#nature">Ver detalles</a>
-                        </div>
-                    </article>
-
-                    <article class="card-topic">
-                        <img src="imgs/index/Populares/popular-05.jpg" alt="Italian Culinary Journey">
-                        <h3>Italian Culinary Journey</h3>
-                        <div class="info-trip">
-                            <ul class="info-trip-text">
-                                <li><strong>Precio</strong>: 1.100€</li>
                                 <li><strong>Plazas Disponibles</strong>: 16</li>
                             </ul>
-                            <a href="explorar.html#italian">Ver detalles</a>
+                            <a href="explorar.html#italian" class="link-details">Ver detalles</a>
+
                         </div>
-                    </article>
+                    </div>
+
+
+                    <button class="btn-carrousel" onclick="nextSlide()">
+                        <i class="fa-solid fa-circle-chevron-right arrow"></i>
+                    </button>
                 </div>
             </section>
 
             <!--Seccion Experiencias-->
-            <section class="cont-height-bg">
+            <section>
                 <h2 class="title-section" id="link-exp">Experiencias</h2>
                 <div class="cards-exp">
 
                     <article class="card-exp">
                         <img src="imgs/index/Experiencias/exp-01.jpg" alt="Grupo de amigos en un partido de NBA">
                         <h3>Basketball Dreams Tour</h3>
-                        <p>Mateo, 30 años</p>
+                        <cite>Mateo, 30 años</cite>
                         <p class="exp-text">"La atmósfera de la NBA es pura magia, emocionante."</p>
                         <p class="exp-date">Marzo 2023</p>
                     </article>
@@ -225,7 +234,7 @@
                     <article class="card-exp">
                         <img src="imgs/index/Experiencias/exp-02.jpg" alt="Grupo de amigos en un partido de NBA">
                         <h3>Lights of Broadway</h3>
-                        <p>Valeria, 28 años</p>
+                        <cite>Valeria, 28 años</cite>
                         <p class="exp-text">"Broadway y Nueva York superaron todas mis expectativas, inolvidable."</p>
                         <p class="exp-date">Mayo 2023</p>
                     </article>
@@ -233,7 +242,7 @@
                     <article class="card-exp">
                         <img src="imgs/index/Experiencias/exp-03.jpg" alt="Grupo de amigos en un partido de NBA">
                         <h3>Dolomites Adventure</h3>
-                        <p>Adrián, 34 años</p>
+                        <cite>Adrián, 34 años</cite>
                         <p class="exp-text">"Los Dolomitas son espectaculares, adrenalina y vistas impresionantes."</p>
                         <p class="exp-date">Febrero 2023</p>
                     </article>
@@ -241,7 +250,7 @@
                     <article class="card-exp">
                         <img src="imgs/index/Experiencias/exp-04.jpg" alt="Grupo de amigos en un partido de NBA">
                         <h3>Cappadocia Horizons</h3>
-                        <p>Elena, 40 años</p>
+                        <cite>Elena, 40 años</cite>
                         <p class="exp-text">"Volar sobre Capadocia fue mágico, paisajes únicos desde el cielo."</p>
                         <p class="exp-date">Octubre 2023</p>
                     </article>
@@ -282,8 +291,9 @@
                     Todos los derechos reservados</p>
             </div>
         </footer>
-    </div>
 
+    </div>
+<script src="events.js"></script>
 
 
 </body>

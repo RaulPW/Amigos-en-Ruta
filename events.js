@@ -154,3 +154,45 @@ document.getElementById("btn-show-thematic-3").onclick = function () {
 document.getElementById("btn-close-thematic-3").onclick = function () {
   document.getElementById("trip-description-thematic-3").close();
 };
+
+
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+
+
+
+let currentIndex = 2;
+
+function updateCarousel() {
+
+  const carouselItems = document.querySelectorAll('.card-topic');
+  carouselItems.forEach((item, index) => {
+    if (index === currentIndex) {
+      item.style.opacity = '1';
+      item.style.transform = 'scale(1)';
+    } else {
+      item.style.opacity = '0.5';
+      item.style.transform = 'scale(0.8)';
+    }
+  });
+}
+
+function nextSlide() {
+  alert('Funciona')
+  if (currentIndex < 4) {
+    currentIndex++;
+    updateCarousel();
+  }
+}
+
+function prevSlide() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateCarousel();
+  }
+}
+
+// Inicializar el carrusel
+updateCarousel();
