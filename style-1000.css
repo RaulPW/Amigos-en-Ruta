@@ -1,0 +1,104 @@
+@media all and (min-width: 1000px) {
+
+    /*INDEX - HEADER*/
+    .back {
+        font-size: 2rem;
+    }
+
+    .link-li-header {
+        font-size: 1.5rem;
+    }
+
+    /*INDEX - QUIENES SOMOS*/
+    .text-description {
+        font-size: 1.2rem;
+        width: 70%;
+    }
+
+
+    /*INDEX - EXPERIENCIAS*/
+    #arrow-left, #arrow-right {
+        display: none;
+    }
+
+    .cards-exp {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 4rem;
+        gap: 2rem;
+    }
+    .card-exp{
+        width: 45%;
+        position: relative;
+        opacity: 1;
+        left: 0;
+    }
+
+    #exp01{
+        left: 0;
+    }
+
+
+
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+
+    /*BLOG - HEADER*/
+    .title-blog {
+        font-size: 3.5rem;
+        padding: 0;
+        width: 60%;
+    }
+
+    .link-home {
+        display: block;
+        width: 15%;
+        text-align: center;
+        font-size: 2rem;
+        color: black;
+    }
+
+    /*BLOG - MAIN*/
+    .foto-art {
+        width: 40%;
+    }
+
+
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+
+    /*VIAJES - MAIN*/
+
+    button[class^="btn-"] {
+        width: 50%;
+    }
+
+    /*Cuadro de diálogo que aparece para ver el itinerario*/
+    .d-trip {
+        transition: all 0.5s;
+        max-width: 90%;
+        left: 5%;
+
+    }
+
+    button[class^="btn-"] {
+        transition: all 0.5s;
+    }
+
+    button[class^="btn-"]:hover {
+        background-color: black;
+        color: #F8692D;
+    }
+
+    .cont-date-price a {
+        transition: all 0.5s;
+    }
+
+    .cont-date-price a:hover {
+        background-color: black;
+        color: #F8692D;
+    }
+
+
+}

@@ -1,0 +1,190 @@
+@media all and (min-width:1100px) {
+
+    .contain {
+        max-width: 1400px;
+    }
+
+    /*INDEX - HEADER*/
+    .back {
+        font-size: 2.5rem;
+    }
+
+    .logo-title {
+        animation: rodar 1s forwards;
+    }
+
+    @keyframes rodar {
+        0% {
+            transform: translateX(-1000px);
+        }
+
+        100% {
+            transform: translate(0px) rotate(720deg);
+        }
+    }
+
+    .link-li-header {
+        font-size: 1.7rem;
+        transition: all 0.5s;
+        margin: 0 1rem;
+        opacity: 0.5;
+
+    }
+
+    .link-li-header:hover {
+        opacity: 1;
+    }
+
+    .cont-img-text img {
+        animation: entrada 1s 1s forwards;
+        opacity: 0;
+    }
+
+    @keyframes entrada {
+        0% {
+            transform: translateX(1000px);
+        }
+
+        100% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+    .slogan {
+        font-size: 4.5rem;
+    }
+
+    .btn-header {
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    .btn-header:hover {
+        background-color: black;
+        color: #F8692D;
+    }
+
+
+
+
+    /*INDEX - QUIENES SOMOS*/
+    .offer-img-info {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .offer-img-info img {
+        width: 50%;
+        border-radius: 0.8rem;
+        margin: 2rem auto;
+    }
+
+    .offer-img-info p {
+        width: 55%;
+        padding: 0.4rem;
+        opacity: 0.8;
+        line-height: 1.5;
+    }
+
+    /*INDEX - CATEGORIAS*/
+    .category {
+        width: 19%;
+    }
+
+    .category p {
+        display: block;
+        line-height: 2;
+        font-size: 0.9rem;
+        opacity: 0;
+        padding: 1rem;
+        font-style: italic;
+        align-content: center;
+        transition: all 0.2s;
+        height: 300px;
+    }
+
+    .category p:hover {
+        opacity: 1;
+        background-color: #F8692D;
+        border: 0.1rem solid;
+        border-radius: 1rem;
+    }
+
+    .category a {
+        transition: all 0.5s;
+    }
+
+    .category a:hover {
+        background-color: #F8692D;
+        color: black;
+    }
+
+    /*INDEX - POPULARES*/
+    .card-topic {
+        max-width: 19%;
+        transition: all 1s;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+
+    .card-topic:hover{
+        transform:scale(1.2);
+        z-index:9999
+
+    }
+
+    .link-details {
+        transition: all 0.5s;
+    }
+
+    .link-details:hover {
+        background-color: black;
+        color: #F8692D;
+
+    }
+
+        /*INDEX - EXPERIENCIAS*/
+        .cards-exp {
+            padding-bottom: 50rem;
+        }
+    
+
+
+
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+
+    /*BLOG - MAIN*/
+
+    /*BLOG - MAIN*/
+    .foto-art {
+        width: 30%;
+    }
+
+    .title-art {
+        font-size: 1.7rem;
+    }
+
+    .text-art,
+    .options {
+        font-size: 1rem;
+    }
+
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+
+    /*EXPLORAR - MAIN*/
+
+    .d-trip {
+        left: 15%;
+        max-width: 70%;
+    }
+
+}

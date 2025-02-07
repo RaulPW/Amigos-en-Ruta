@@ -1,0 +1,51 @@
+@media all and (min-width: 600px) {
+
+    /*INDEX - HEADER*/
+    .links-header {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .btn-header {
+        width: 300px;
+    }
+
+
+    /*INDEX - EXPERIENCIA*/
+    .cards-exp {
+        padding-bottom: 35rem;
+    }
+
+    .card-exp {
+        width: 70%;
+    }
+
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+
+    /*BLOG - MAIN*/
+    .text-art,
+    .options {
+        font-size: 1rem;
+    }
+
+
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+
+    /*VIAJES - MAIN*/
+    .trip h3 {
+        font-size: 1.7rem;
+    }
+
+    .d-trip {
+        top: 8%;
+        left: 3%;
+    }
+
+    button[class^="btn-"] {
+        width: 90%;
+    }
+
+
+}
