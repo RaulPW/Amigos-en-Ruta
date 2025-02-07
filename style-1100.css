@@ -33,6 +33,7 @@
 
     .link-li-header:hover {
         opacity: 1;
+        transform: scale(1.1);
     }
 
     .cont-img-text img {
@@ -130,10 +131,9 @@
         align-items: flex-end;
     }
 
-    .card-topic:hover{
-        transform:scale(1.2);
-        z-index:9999
-
+    .card-topic:hover {
+        transform: scale(1.05);
+        z-index: 9999
     }
 
     .link-details {
@@ -146,11 +146,18 @@
 
     }
 
-        /*INDEX - EXPERIENCIAS*/
-        .cards-exp {
-            padding-bottom: 50rem;
-        }
-    
+    /*INDEX - EXPERIENCIAS*/
+
+    .cards-exp {
+        gap: 0rem;
+    }
+
+    .card-exp {
+        width: 24%;
+
+
+    }
+
 
 
 

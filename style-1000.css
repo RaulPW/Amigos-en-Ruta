@@ -17,7 +17,8 @@
 
 
     /*INDEX - EXPERIENCIAS*/
-    #arrow-left, #arrow-right {
+    #arrow-left,
+    #arrow-right {
         display: none;
     }
 
@@ -28,16 +29,14 @@
         padding-bottom: 4rem;
         gap: 2rem;
     }
-    .card-exp{
+
+    .card-exp {
         width: 45%;
         position: relative;
         opacity: 1;
         left: 0;
     }
 
-    #exp01{
-        left: 0;
-    }
 
 
 

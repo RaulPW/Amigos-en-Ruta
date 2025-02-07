@@ -336,16 +336,16 @@ img {
 }
 
 .category a {
-	display: block;
-	text-align: center;
-	margin: 1.5rem auto;
-	text-decoration: none;
-	color: #F8692D;
-	font-weight: bold;
-	border: 0.2rem solid black;
-	border-radius: 0.8rem;
-	padding: 0.5rem;
-	background-color: black;
+    display: block;
+    text-align: center;
+    margin: 1.5rem auto;
+    text-decoration: none;
+    color: #F8692D;
+    font-weight: bold;
+    border: 0.2rem solid black;
+    border-radius: 0.8rem;
+    padding: 0.5rem;
+    background-color: black;
 }
 
 /*---------------------------------------------------------------------------------*/
@@ -419,7 +419,7 @@ img {
     font-size: 1.2rem;
     z-index: 9999;
     transition: all 1s;
-    
+
 }
 
 .arrow {
@@ -443,10 +443,12 @@ img {
 }
 
 .cards-exp {
-    padding: 1rem 0 28rem;
+    padding: 2rem 0 35rem;
+
     position: relative;
     overflow: hidden;
-    transition: all 1s;  
+    transition: all 1s;
+    min-height: 400px;
 }
 
 .card-exp {
@@ -518,7 +520,7 @@ img {
 /*CSS - MAIN*/
 .art-blog {
     width: 80%;
-    margin: 3rem auto;
+    margin: 5rem auto;
     background-color: #F8692D;
     padding: 1rem;
     text-align: justify;
@@ -526,6 +528,9 @@ img {
     border-radius: 0.8rem;
     overflow: auto;
     box-shadow: 0 4px 2px 0px #00000063, 0 6px 2px 0 #00000063;
+    transform: scale(0);
+    transition: all 1s;
+    opacity: 0;
 }
 
 .art-date i {
