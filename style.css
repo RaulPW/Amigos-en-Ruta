@@ -32,6 +32,7 @@ body {
 
 .contain {
     max-width: 1400px;
+    min-width: 390px;
     margin: 0 auto;
 }
 
@@ -413,12 +414,12 @@ img {
     width: 45px;
     cursor: pointer;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     font-weight: bold;
     font-size: 1.2rem;
     z-index: 9999;
-    transition: all 1s;
+    transition: all 0.5s ease;
 
 }
 
@@ -432,23 +433,26 @@ img {
 #arrow-left {
     position: absolute;
     top: 50%;
-    left: 0%;
+    left: 10px;
+    /* Un poco de margen desde el borde izquierdo */
+    transform: translateY(-50%);
+    /* Centra la flecha verticalmente */
     display: none;
 }
 
 #arrow-right {
     position: absolute;
-    right: 0%;
+    right: 10px;
+    transform: translateY(-50%);
     top: 50%;
 }
 
 .cards-exp {
-    padding: 2rem 0 35rem;
-
     position: relative;
     overflow: hidden;
-    transition: all 1s;
-    min-height: 400px;
+    min-height: 600px;
+
+
 }
 
 .card-exp {
@@ -458,11 +462,21 @@ img {
     position: absolute;
     box-shadow: 2px -2px 10px #00000091, -2px 2px 10px #00000091;
     margin-bottom: 1rem;
-    width: 70%;
-    margin: 0 auto;
-    transition: all 1s;
-    left: -110%;
+    min-width: 250px;
+    max-width: 500px;
+    transition: left 0.5s ease-out, opacity 0.5s ease-out, transform 0.5s ease-out;
+    /* Mueve el borde izquierdo de la tarjeta al centro del padre */
+    left: 50%;
+    /* Mueve la tarjeta hacia la izquierda por la mitad de su propio ancho, centrándola */
+    transform: translateX(-50%);
     opacity: 0;
+    max-height: 600px;
+
+}
+
+#exp-01 {
+    left: 15%;
+    opacity: 1;
 }
 
 
@@ -782,5 +796,518 @@ button[class^="btn-"] {
     text-align: center;
     margin: 1rem auto;
     max-width: 125px;
+
+}
+
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+
+/*RESPONSIVE*/
+
+@media all and (min-width: 600px) {
+
+    /*INDEX - HEADER*/
+    .links-header {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .btn-header {
+        width: 300px;
+    }
+
+
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+
+    /*BLOG - MAIN*/
+    .text-art,
+    .options {
+        font-size: 1rem;
+    }
+
+
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+
+    /*VIAJES - MAIN*/
+    .trip h3 {
+        font-size: 1.7rem;
+    }
+
+    .d-trip {
+        top: 8%;
+        left: 3%;
+    }
+
+    button[class^="btn-"] {
+        width: 90%;
+    }
+}
+
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+
+@media all and (min-width: 800px) {
+
+    /*INDEX - HEADER*/
+    .cont-title-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cont-ul-header {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .link-li-header {
+        font-size: 1.3rem;
+        padding: 0.5rem;
+        transition: all 0.5s;
+    }
+
+    .cont-img-text {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .cont-img-text img {
+        width: 50%;
+        animation: entrada 1s 1s forwards;
+        opacity: 0;
+    }
+
+    @keyframes entrada {
+        0% {
+            transform: translateX(1000px);
+        }
+
+        100% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+    .cont-text-link {
+        text-align: center;
+        width: 45%;
+    }
+
+    .slogan {
+        animation: aparecer 1s 2s forwards;
+        opacity: 0;
+    }
+
+    @keyframes aparecer {
+        0% {
+            transform: scale(0);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scale(1.3);
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .btn-header {
+        transition: all 0.5s;
+    }
+
+
+    /*INDEX - QUIENES SOMOS*/
+    .description {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .text-description {
+        width: 48%;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .description img {
+        max-width: 350px;
+    }
+
+    .cont-art-offer {
+        display: flex;
+    }
+
+    .art-aboutus {
+        width: 30%;
+    }
+
+    /*INDEX - CATEGORIAS*/
+    .cards-categories {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .category {
+        width: 32%;
+        padding: 0.5rem;
+    }
+
+    /*INDEX - POPULARES*/
+    .contain-card-topic {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card-topic {
+        width: 32%;
+    }
+
+
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+
+    /*BLOG - HEADER*/
+    .cont-title-blog {
+        display: flex;
+        align-items: center;
+    }
+
+    .title-blog {
+        padding: 0 1.5rem;
+    }
+
+    /*BLOG - MAIN*/
+    .foto-art {
+        width: 50%;
+        float: left;
+        margin-right: 0.8rem;
+        margin-bottom: 0.2rem;
+    }
+
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+
+    /*VIAJES - HEADER*/
+    .arrow-comeback {
+        display: block;
+    }
+
+    /*VIAJES - MAIN*/
+    .trip h3 {
+        font-size: 2rem;
+    }
+
+    .d-trip {
+        top: 15%;
+    }
+
+    button[class^="btn-"] {
+        width: 70%;
+    }
+
+    .cont-date-price {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+
+    }
+}
+
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+
+@media all and (min-width: 1000px) {
+
+    /*INDEX - HEADER*/
+    .back {
+        font-size: 2rem;
+    }
+
+    .link-li-header {
+        font-size: 1.5rem;
+    }
+
+    /*INDEX - QUIENES SOMOS*/
+    .text-description {
+        font-size: 1.2rem;
+        width: 70%;
+    }
+
+
+
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+
+    /*BLOG - HEADER*/
+    .title-blog {
+        font-size: 3.5rem;
+        padding: 0;
+        width: 60%;
+    }
+
+    .link-home {
+        display: block;
+        width: 15%;
+        text-align: center;
+        font-size: 2rem;
+        color: black;
+    }
+
+    /*BLOG - MAIN*/
+    .foto-art {
+        width: 40%;
+    }
+
+
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+
+    /*VIAJES - MAIN*/
+
+    button[class^="btn-"] {
+        width: 50%;
+    }
+
+    /*Cuadro de diálogo que aparece para ver el itinerario*/
+    .d-trip {
+        transition: all 0.5s;
+        max-width: 90%;
+        left: 5%;
+
+    }
+
+    button[class^="btn-"] {
+        transition: all 0.5s;
+    }
+
+    button[class^="btn-"]:hover {
+        background-color: black;
+        color: #F8692D;
+    }
+
+    .cont-date-price a {
+        transition: all 0.5s;
+    }
+
+    .cont-date-price a:hover {
+        background-color: black;
+        color: #F8692D;
+    }
+}
+
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+
+@media all and (min-width:1100px) {
+
+    .contain {
+        max-width: 1400px;
+    }
+
+    /*INDEX - HEADER*/
+    .back {
+        font-size: 2.5rem;
+    }
+
+    .logo-title {
+        animation: rodar 1s forwards;
+    }
+
+    @keyframes rodar {
+        0% {
+            transform: translateX(-1000px);
+        }
+
+        100% {
+            transform: translate(0px) rotate(720deg);
+        }
+    }
+
+    .link-li-header {
+        font-size: 1.7rem;
+        transition: all 0.5s;
+        margin: 0 1rem;
+        opacity: 0.5;
+
+    }
+
+    .link-li-header:hover {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    .cont-img-text img {
+        animation: entrada 1s 1s forwards;
+        opacity: 0;
+    }
+
+    @keyframes entrada {
+        0% {
+            transform: translateX(1000px);
+        }
+
+        100% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+    .slogan {
+        font-size: 4.5rem;
+    }
+
+    .btn-header {
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    .btn-header:hover {
+        background-color: black;
+        color: #F8692D;
+    }
+
+
+    /*INDEX - QUIENES SOMOS*/
+    .offer-img-info {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .offer-img-info img {
+        width: 50%;
+        border-radius: 0.8rem;
+        margin: 2rem auto;
+    }
+
+    .offer-img-info p {
+        width: 55%;
+        padding: 0.4rem;
+        opacity: 0.8;
+        line-height: 1.5;
+    }
+
+    /*INDEX - CATEGORIAS*/
+    .category {
+        width: 19%;
+    }
+
+    .category p {
+        display: block;
+        line-height: 2;
+        font-size: 0.9rem;
+        opacity: 0;
+        padding: 1rem;
+        font-style: italic;
+        align-content: center;
+        transition: all 0.2s;
+        height: 300px;
+    }
+
+    .category p:hover {
+        opacity: 1;
+        background-color: #F8692D;
+        border: 0.1rem solid;
+        border-radius: 1rem;
+    }
+
+    .category a {
+        transition: all 0.5s;
+    }
+
+    .category a:hover {
+        background-color: #F8692D;
+        color: black;
+    }
+
+    /*INDEX - POPULARES*/
+    .card-topic {
+        max-width: 19%;
+        transition: all 1s;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+
+    .card-topic:hover {
+        transform: scale(1.05);
+        z-index: 9999
+    }
+
+    .link-details {
+        transition: all 0.5s;
+    }
+
+    .link-details:hover {
+        background-color: black;
+        color: #F8692D;
+
+    }
+
+    a
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+
+    /*BLOG - MAIN*/
+
+    /*BLOG - MAIN*/
+    .foto-art {
+        width: 30%;
+    }
+
+    .title-art {
+        font-size: 1.7rem;
+    }
+
+    .text-art,
+    .options {
+        font-size: 1rem;
+    }
+
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------------------------------------------------------*/
+
+    /*EXPLORAR - MAIN*/
+
+    .d-trip {
+        left: 15%;
+        max-width: 70%;
+    }
 
 }
