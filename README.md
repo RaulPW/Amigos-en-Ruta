@@ -42,7 +42,7 @@ Para ver y ejecutar este proyecto localmente, sigue estos sencillos pasos:
 
 1.	Clona el repositorio:
 
-         git clone https://github.com/RaulPW/AmigosEnRuta.git
+         git clone https://github.com/rdelgadodev/AmigosEnRuta.git
 
 2.	Abre el archivo index.html: Simplemente abre el archivo index.html en tu navegador web preferido (por ejemplo, haciendo doble clic en él).
 
