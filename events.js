@@ -49,17 +49,17 @@ document.addEventListener("DOMContentLoaded", function () {
         //Actual tarjeta
         if (index === current_exp) {
           card.style.left = "50%";
-          card.style.transform = "translateX(-50%)";
+          card.style.transform = "translateX(-50%) scale(1)";
           card.style.opacity = "1";
           card.style.zIndex = "1";
         } else if (index > current_exp) {
           card.style.left = "-100%"; // Mueve la tarjeta a la izquierda fuera de la vista
-          card.style.transform = "translateX(-50%)"; // Mantén el transform para coherencia
+          card.style.transform = "translateX(-50%) scale(1)"; // Mantén el transform para coherencia
           card.style.opacity = "0";
           card.style.zIndex = "0";
         } else {
-          card.style.left = "200%"; // Mueve la tarjeta a la derecha fuera de la vista
-          card.style.transform = "translateX(-50%)"; // Mantén el transform para coherencia
+          card.style.left = "100%"; // Mueve la tarjeta a la derecha fuera de la vista
+          card.style.transform = "translateX(-50%) scale(1)"; // Mantén el transform para coherencia
           card.style.opacity = "0";
           card.style.zIndex = "0";
         }
@@ -67,8 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Actualiza la visibilidad de las flechas
       arrowLeft.style.display = current_exp === 0 ? "none" : "initial";
-      arrowRight.style.display =
-        current_exp === POSICION.length - 1 ? "none" : "initial";
+      arrowRight.style.display = current_exp === POSICION.length - 1 ? "none" : "initial";
     }
     // Inicializar el carrusel al cargar la página
     // Llama a updateCarousel() al inicio para posicionar la primera tarjeta correctamente

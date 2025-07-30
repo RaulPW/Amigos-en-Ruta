@@ -464,7 +464,7 @@ img {
     margin-bottom: 1rem;
     min-width: 250px;
     max-width: 500px;
-    transition: left 0.5s ease-out, opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition: opacity 0.5s ease-out, left 0.5s ease-out;
     /* Mueve el borde izquierdo de la tarjeta al centro del padre */
     left: 50%;
     /* Mueve la tarjeta hacia la izquierda por la mitad de su propio ancho, centrándola */
@@ -473,12 +473,6 @@ img {
     max-height: 600px;
 
 }
-
-#exp-01 {
-    left: 15%;
-    opacity: 1;
-}
-
 
 
 .card-exp img {
