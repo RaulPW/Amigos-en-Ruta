@@ -35,11 +35,11 @@ for (let i = 0; i < btnTripClose.length; ++i) {
 // Evento carrousel sobre las tarjetas populares
 
 document.addEventListener("DOMContentLoaded", function () {
-  const path = window.location.pathname;
+  
   //Que solo se produzca el evento en la página index.html
-  if (path.includes("index.html") || path === '/Amigos-en-Ruta/') {
+  if (window.location.pathname.includes("index.html") || window.location.pathname.includes("Amigos-en-Ruta")) {
     let current_exp = 0;
-    const POSICION = document.query.SelectorAll(".card-exp");
+    const POSICION = document.querySelectorAll(".card-exp");
     // Variables para almacenar las flechas
     const arrowLeft = document.getElementById("arrow-left");
     const arrowRight = document.getElementById("arrow-right");
