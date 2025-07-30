@@ -37,7 +37,7 @@ for (let i = 0; i < btnTripClose.length; ++i) {
 document.addEventListener("DOMContentLoaded", function () {
   const path = window.location.pathname;
   //Que solo se produzca el evento en la página index.html
-  if (path.includes("index.html") || path == '/Amigos-en-Ruta/') {
+  if (path.includes("index.html") || path === '/Amigos-en-Ruta/') {
     let current_exp = 0;
     const POSICION = document.query.SelectorAll(".card-exp");
     // Variables para almacenar las flechas
