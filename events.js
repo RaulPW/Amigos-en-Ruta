@@ -35,7 +35,7 @@ for (let i = 0; i < btnTripClose.length; ++i) {
 // Evento carrousel sobre las tarjetas populares
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log('Carga el JS')
+  
   
   //Que solo se produzca el evento en la página index.html
   if (window.location.pathname.includes("index.html") || window.location.pathname.includes("Amigos-en-Ruta")) {
@@ -88,9 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCarousel();
       }
     };
-  } else{
-    console.log('No entra en el if')
-  }
+  } 
 });
 
 /*---------------------------------------------------------------------------------*/
