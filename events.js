@@ -35,10 +35,11 @@ for (let i = 0; i < btnTripClose.length; ++i) {
 // Evento carrousel sobre las tarjetas populares
 
 document.addEventListener("DOMContentLoaded", function () {
+  const path = window.location.pathname;
   //Que solo se produzca el evento en la página index.html
-  if (window.location.pathname.includes("index.html")) {
+  if (path.includes("index.html") || path == '/Amigos-en-Ruta/') {
     let current_exp = 0;
-    const POSICION = document.querySelectorAll(".card-exp");
+    const POSICION = document.query.SelectorAll(".card-exp");
     // Variables para almacenar las flechas
     const arrowLeft = document.getElementById("arrow-left");
     const arrowRight = document.getElementById("arrow-right");
@@ -103,7 +104,6 @@ const ARTICULOS = document.querySelectorAll(".art-blog");
 
 // Creamos variable para almacenar la altura máxima que nos servirá para un bucle for
 let hw = window.innerHeight;
-console.log(hw);
 
 // Variable para poder ir acceder a cada uno de los elementos (ARTICULOS[article_actual])
 //let article_actual = 0;
